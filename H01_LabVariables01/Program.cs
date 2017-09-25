@@ -22,7 +22,7 @@ namespace H01_LabVariables01
             Expected Output :
 
             'birds' is in the string 'Kill two birds with one stone': True
-            'birds begins at character position 10
+            'birds begins at character position 9
 
             Test Data: 
             String1 : "Kill two birds with one stone"
@@ -31,7 +31,7 @@ namespace H01_LabVariables01
             Expected Output :
 
             'TWO' is in the string 'Kill two birds with one stone': True
-            'TWO begins at character position 6
+            'TWO begins at character position 5
 
             Test Data: 
             String1 : "Kill two birds with one stone"
@@ -44,6 +44,9 @@ namespace H01_LabVariables01
 
             */
 
+            
+
+            Console.ReadLine();
         }
     }
 }
