@@ -20,12 +20,12 @@ namespace H01_LabVariables04
              */
 
             Console.Write("Radius: ");
-            double radius = double.Parse(Console.ReadLine());
+            string userRadius = Console.ReadLine();
+            double radius = double.Parse(userRadius);
 
             double area = radius * radius * Math.PI;
-            double perimeter = radius * 2 * Math.PI;
-
-
+            double perimeter =  radius * 2 * Math.PI;
+            
             Console.WriteLine($"Area: {area}");
             Console.WriteLine($"Perimeter: {perimeter}");
 

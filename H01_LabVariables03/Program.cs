@@ -14,12 +14,20 @@ namespace H01_LabVariables03
              * Write a program that asks the age of the user and writes True if the age is greater than 18
             */
 
-            Console.WriteLine("How old are you?");
+            //step 1:
+            //asks the age of the user 
 
+            Console.Write("How old are you?");
             string userAge = Console.ReadLine();
+
+            //step 2:
+            // convert to int
             int age = int.Parse(userAge);
-            bool greaterThan18 = age > 18; 
-            Console.WriteLine(greaterThan18);
+
+            //step 3:
+            // write True if the age is greater than 18
+            Console.WriteLine(age > 18);
+
             Console.ReadLine();
 
 

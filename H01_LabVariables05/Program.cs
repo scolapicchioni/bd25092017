@@ -31,12 +31,15 @@ namespace H01_LabVariables05
              */
 
             Console.Write("First number:");
-            int first = int.Parse(Console.ReadLine());
+            string userInput = Console.ReadLine();
+            int first = int.Parse(userInput);
 
             Console.Write("Second number:");
-            int second = int.Parse(Console.ReadLine());
+            userInput = Console.ReadLine();
+            int second = int.Parse(userInput);
 
-            bool multiple = first % second == 0;
+            int rest = first % second; // 20 / 5 = 4 rest 0; 21 / 5 = 4 rest 1
+            bool multiple = rest == 0;
 
             Console.WriteLine($"{first} is a multiple of {second}: {multiple}");
 
