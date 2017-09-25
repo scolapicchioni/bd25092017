@@ -45,8 +45,6 @@ namespace H01_LabVariables01
             */
 
             
-
-            Console.ReadLine();
         }
     }
 }

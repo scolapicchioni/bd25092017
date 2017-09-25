@@ -20,9 +20,11 @@ namespace H01_LabVariables02
             Input the string to be inserted : test 
             
             Expected Output :
-            The modified string is : this is  test a string
+            The modified string is : this is testa string
              
             */
+
+            
         }
     }
 }
