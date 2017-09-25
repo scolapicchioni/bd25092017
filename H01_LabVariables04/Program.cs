@@ -18,6 +18,18 @@ namespace H01_LabVariables04
                 Perimeter = twice the radius multiplied by PI
                 Area = radius squared multiplied by PI
              */
+
+            Console.Write("Radius: ");
+            double radius = double.Parse(Console.ReadLine());
+
+            double area = radius * radius * Math.PI;
+            double perimeter = radius * 2 * Math.PI;
+
+
+            Console.WriteLine($"Area: {area}");
+            Console.WriteLine($"Perimeter: {perimeter}");
+
+            Console.ReadLine();
         }
     }
 }

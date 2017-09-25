@@ -29,6 +29,18 @@ namespace H01_LabVariables05
             "21 is a multiple of 5: False"
             
              */
+
+            Console.Write("First number:");
+            int first = int.Parse(Console.ReadLine());
+
+            Console.Write("Second number:");
+            int second = int.Parse(Console.ReadLine());
+
+            bool multiple = first % second == 0;
+
+            Console.WriteLine($"{first} is a multiple of {second}: {multiple}");
+
+            Console.ReadLine();
         }
     }
 }
