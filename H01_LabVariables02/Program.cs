@@ -24,6 +24,21 @@ namespace H01_LabVariables02
              
             */
 
+            Console.Write("Original String: ");
+            string original = Console.ReadLine();
+            Console.Write("String to be searched: ");
+            string toBeSearched = Console.ReadLine();
+            Console.Write("String to insert: ");
+            string toInsert = Console.ReadLine();
+
+            int position = original.IndexOf(toBeSearched);
+
+            string result = original.Insert(position, toInsert);
+
+            //string result = original.Insert(original.IndexOf(toBeSearched), toInsert);
+            Console.WriteLine(result);
+            Console.ReadLine();
+
             
         }
     }

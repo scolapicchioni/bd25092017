@@ -40,11 +40,25 @@ namespace H01_LabVariables01
             Expected Output :
 
             'stoone' is in the string 'Kill two birds with one stone': False
-            'TWO begins at character position -1
+            'stoone begins at character position -1
 
             */
 
-            
+            Console.WriteLine("Insert the first string");
+            string first = Console.ReadLine();
+            Console.WriteLine("Insert the second string");
+            string second = Console.ReadLine();
+
+            string firstToLower = first.ToLower();
+            string secondToLower = second.ToLower();
+
+            bool result = firstToLower.Contains(secondToLower);
+            int position = firstToLower.IndexOf(secondToLower);
+
+            Console.WriteLine($"{second} is contained in {first}: {result}");
+            Console.WriteLine($"{second} begins at character position: {position}");
+
+            Console.ReadLine();
         }
     }
 }
