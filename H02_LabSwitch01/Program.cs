@@ -25,7 +25,44 @@ namespace H02_LabSwitch01 {
 			    6 or more         No insurance
             */
 
-
+            Console.WriteLine("Age? ");
+            int age = int.Parse(Console.ReadLine());
+            if (age < 18) {
+                Console.WriteLine("You're too young to drive!");
+            } else {
+                Console.WriteLine("How many accidents have you had?");
+                int accidents = int.Parse(Console.ReadLine());
+                if (accidents >= 6 || accidents < 0) {
+                    Console.WriteLine("No insurance for you, mister!");
+                } else {
+                    int basicCharge = 500;
+                    int surcharge = 0;
+                    if (age < 25) {
+                        surcharge = 100;
+                    }
+                    switch (accidents) {
+                        case 1:
+                            surcharge += 50;
+                            break;
+                        case 2:
+                            surcharge += 125;
+                            break;
+                        case 3:
+                            surcharge += 225;
+                            break;
+                        case 4:
+                            surcharge += 375;
+                            break;
+                        case 5:
+                            surcharge += 575;
+                            break;
+                    }
+                    Console.WriteLine($"Your insurance premium is {basicCharge + surcharge}");
+                }
+            }
+            
+            
+            Console.ReadLine();
         }
     }
 }
