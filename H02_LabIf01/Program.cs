@@ -14,6 +14,21 @@ namespace H02_LabIf01 {
 	                - In yellow if he's between 18 and 65
 	                - In green if he's over 65
             */
+
+            Console.Write("How old are you?");
+            int age = int.Parse(Console.ReadLine());
+
+            if (age < 18) {
+                Console.ForegroundColor = ConsoleColor.Red;
+            } else if (age > 65) {
+                Console.ForegroundColor = ConsoleColor.Green;
+            } else {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+            }
+
+            Console.WriteLine($"Your age is {age}");
+
+            Console.ReadLine();
         }
     }
 }
