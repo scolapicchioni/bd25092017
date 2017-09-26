@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace H01_LabVariables07
 {
@@ -16,6 +12,13 @@ namespace H01_LabVariables07
              - de eerste letter van de naam
              - de laatste letter van de naam
             */
+
+            Console.Write("Name? ");
+            string userName = Console.ReadLine();
+            Console.WriteLine($"{userName} is {userName.Length} letters long");
+            Console.WriteLine($"The first letter of {userName} is {userName.Substring(0,1)}");
+            Console.WriteLine($"The last letter of {userName} is {userName.Substring(userName.Length-1, 1)}");
+            Console.ReadLine();
         }
     }
 }

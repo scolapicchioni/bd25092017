@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H01_LabVariables06", "H01_L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H01_LabVariables07", "H01_LabVariables07\H01_LabVariables07.csproj", "{8F50E69F-5D5C-498F-89EC-60A05A2F959E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H01Variables4", "H01Variables4\H01Variables4.csproj", "{3CCE973D-3F26-400B-8B25-7370FFF8A5FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H01_LabVariables08", "H01_LabVariables08\H01_LabVariables08.csproj", "{DE6D3099-BECD-4678-BC8E-C47306784E0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{8F50E69F-5D5C-498F-89EC-60A05A2F959E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F50E69F-5D5C-498F-89EC-60A05A2F959E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F50E69F-5D5C-498F-89EC-60A05A2F959E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CCE973D-3F26-400B-8B25-7370FFF8A5FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CCE973D-3F26-400B-8B25-7370FFF8A5FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CCE973D-3F26-400B-8B25-7370FFF8A5FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CCE973D-3F26-400B-8B25-7370FFF8A5FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE6D3099-BECD-4678-BC8E-C47306784E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE6D3099-BECD-4678-BC8E-C47306784E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE6D3099-BECD-4678-BC8E-C47306784E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE6D3099-BECD-4678-BC8E-C47306784E0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
