@@ -12,6 +12,9 @@ namespace H02_LabLoops03 {
              * en vervolgens de modus afdrukt 
              * (de modus is het getal dat het meest voorkomt). 
              */
+
+           
+            Console.ReadLine();
         }
     }
 }

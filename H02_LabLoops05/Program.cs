@@ -18,6 +18,31 @@ namespace H02_LabLoops05 {
              * is applied on the sum of the amount 
              * and the interest of the previous year.
              */
+
+            /*
+             * amount 0
+             * interest 8
+             * 
+             *  year | total
+             *  0    | 1000
+             *  1    | prev + 8% of prev
+             *  2    | prev + 8% of prev
+             */
+            Console.WriteLine("Initial amount: ");
+            double amount = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Interest rate (%): " );
+            double interest = double.Parse(Console.ReadLine()) / 100;
+
+            double goal = amount * 2;
+            int years = 0;
+            double subTotal = amount;
+            while (subTotal < goal) {
+                subTotal = subTotal + (subTotal * interest);
+                years++;
+            }
+            Console.WriteLine($"The amount of year necessary to bring {amount} to {goal} with an interest of {interest} is {years}");
+            Console.ReadLine();
         }
     }
 }

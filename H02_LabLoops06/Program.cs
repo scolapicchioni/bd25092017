@@ -42,7 +42,6 @@ namespace H02_LabLoops06 {
 						                            ------------  +
 							                                253
 
-
                 As 253 can be divided by 11 (253 / 11 = 23 remainder 0 ) 
                 538794615 probably is a valid bank account number
                 
@@ -57,6 +56,24 @@ namespace H02_LabLoops06 {
                 3.	Check with the above algorithm whether the number is valid.
 
              */
+
+            string accountNumber = Console.ReadLine();
+            if (accountNumber.Length != 9) {
+                Console.WriteLine("not valid");
+            } else {
+                int total = 0;
+                for (int letterPosition = 0, multiplier = 9; letterPosition < 9; letterPosition++, multiplier--) {
+                    int digit = int.Parse(accountNumber.Substring(letterPosition,1));
+                    int subTotal = digit * multiplier;
+                    total += subTotal;
+                }
+                if (total % 11 == 0) {
+                    Console.WriteLine("valid");
+                } else {
+                    Console.WriteLine("not valid");
+                }
+            }
+            Console.ReadLine();
         }
     }
 }
