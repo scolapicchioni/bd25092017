@@ -21,6 +21,33 @@ The elements stored in the first array are :
 The elements copied into the second array are : 
 15 10 12 
 */
+
+            Console.Write("How many elements do you want to store? ");
+            int howMany = int.Parse(Console.ReadLine());
+
+            int[] list = new int[howMany];
+            
+            for (int i = 0; i < list.Length; i++) {
+                Console.Write($"Element {i}: ");
+                list[i] = int.Parse(Console.ReadLine());
+            }
+
+            int[] copy = new int[list.Length];
+            for (int i = 0; i < list.Length; i++) {
+                copy[i] = list[i];
+            }
+
+            Console.WriteLine("The elements stored in the first array are : ");
+            for (int i = 0; i < list.Length; i++) {
+                Console.Write($"{list[i]} ");
+            }
+
+            Console.WriteLine("\nThe elements copied into the second array are : ");
+            for (int i = 0; i < copy.Length; i++) {
+                Console.Write($"{copy[i]} ");
+            }
+            Console.ReadLine();
+
         }
     }
 }

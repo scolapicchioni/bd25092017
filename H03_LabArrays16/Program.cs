@@ -20,6 +20,15 @@ element - 4 : 6
 Expected Output : 
 The Second largest element in the array is: 6 
 */
+            Console.Write("How many elements do you want to store? ");
+            int howMany = int.Parse(Console.ReadLine());
+
+            int[] list1 = new int[howMany];
+
+            for (int i = 0; i < list1.Length; i++) {
+                Console.Write($"Element {i}: ");
+                list1[i] = int.Parse(Console.ReadLine());
+            }
         }
     }
 }

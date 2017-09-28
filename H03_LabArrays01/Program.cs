@@ -25,6 +25,14 @@ element - 9 : 2
 Expected Output : 
 Elements in array are: 1 3 2 4 8 2 9 2 8 2
              */
+
+            int[] list = { 1 ,3 ,2, 4, 8, 2, 9, 2, 8, 2 };
+
+            Console.Write("Elements in array are: ");
+            foreach (int item in list) {
+                Console.Write(item + " ");
+            }
+            Console.ReadLine();
         }
     }
 }

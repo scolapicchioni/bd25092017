@@ -22,6 +22,42 @@ The exist array list is :
 After Insert the list is : 
 5 7 8 9
 */
+            Console.Write("How many elements do you want to store? ");
+            int howMany = int.Parse(Console.ReadLine());
+
+            int[] list = new int[howMany];
+
+
+            for (int i = 0; i < list.Length; i++) {
+                Console.Write($"Element {i}: ");
+                list[i] = int.Parse(Console.ReadLine());
+            }
+            Array.Sort(list); //just to be sure...
+
+            Console.Write("Input the value to be inserted : ");
+            int newValue = int.Parse(Console.ReadLine());
+
+            int[] temp = new int[list.Length + 1];
+            int position = 0;
+            for (int i = 0; i < list.Length; i++) {
+                if (list[i] <= newValue) {
+                    temp[i] = list[i];
+                } else {
+                    position = i;
+                    break;
+                }
+            }
+
+            temp[position] = newValue;
+            for (int i = position ; i < list.Length; i++) {
+                temp[i + 1] = list[i];
+            }
+
+            
+            for (int i = 0; i < temp.Length; i++) {
+                Console.WriteLine($"{temp[i]}");
+            }
+            Console.ReadLine();
         }
     }
 }

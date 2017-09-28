@@ -21,6 +21,25 @@ Expected Output :
 Elements of array in sorted ascending order: 
 2 4 5 7 9
 */
+
+            Console.Write("How many elements do you want to store? ");
+            int howMany = int.Parse(Console.ReadLine());
+
+            int[] list = new int[howMany];
+            
+
+            for (int i = 0; i < list.Length; i++) {
+                Console.Write($"Element {i}: ");
+                list[i] = int.Parse(Console.ReadLine());
+            }
+
+            Array.Sort(list);
+
+            Console.WriteLine("Elements of array in sorted ascending order: ");
+            foreach (int item in list) {
+                Console.Write(item + " " );
+            }
+            Console.ReadLine();
         }
     }
 }

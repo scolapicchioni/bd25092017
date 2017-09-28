@@ -18,6 +18,19 @@ element - 2 : 8
 Expected Output : 
 Sum of all elements stored in the array is : 15 
 */
+
+            Console.Write("How many elements do you want to store? ");
+            int howMany = int.Parse(Console.ReadLine());
+
+            int[] list = new int[howMany];
+            int total = 0;
+            for (int i = 0; i < list.Length; i++) {
+                Console.Write($"Element {i}: ");
+                list[i] = int.Parse(Console.ReadLine());
+                total += list[i];
+            }
+            Console.WriteLine($"Sum of all elements stored in the array is : {total}");
+            Console.ReadLine();
         }
     }
 }

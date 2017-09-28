@@ -19,6 +19,26 @@ Expected Output :
 Elements of the array in sorted descending order: 
 9 5 1
 */
+
+            Console.Write("How many elements do you want to store? ");
+            int howMany = int.Parse(Console.ReadLine());
+
+            int[] list = new int[howMany];
+
+
+            for (int i = 0; i < list.Length; i++) {
+                Console.Write($"Element {i}: ");
+                list[i] = int.Parse(Console.ReadLine());
+            }
+
+            Array.Sort(list);
+            Array.Reverse(list);
+
+            Console.WriteLine("Elements of array in sorted descending order: ");
+            foreach (int item in list) {
+                Console.Write(item + " ");
+            }
+            Console.ReadLine();
         }
     }
 }
