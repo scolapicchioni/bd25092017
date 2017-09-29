@@ -26,7 +26,7 @@ namespace H04_OO02.Tests {
             //When Assigned The Account
             c.Account = b;
             //Then Customer Should Have The Same Account
-            Assert.AreEqual(c.Account.Saldo, b);
+            Assert.AreEqual(c.Account, b);
         }
 
         [TestMethod]

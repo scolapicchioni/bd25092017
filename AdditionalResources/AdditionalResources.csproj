@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0EB1E349-DFEC-4D1B-B707-0B8410C1A032}</ProjectGuid>
+    <ProjectGuid>{26B1A682-2CCD-40D4-A269-3BC97B5AC463}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>H04_LabOO04</RootNamespace>
-    <AssemblyName>H04_LabOO04</AssemblyName>
+    <RootNamespace>AdditionalResources</RootNamespace>
+    <AssemblyName>AdditionalResources</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,11 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Course.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student.cs" />
-    <Compile Include="Teacher.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
