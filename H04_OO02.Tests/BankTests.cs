@@ -50,5 +50,12 @@ namespace H04_OO02.Tests {
             //ThenTheTotalShouldBe300
             Assert.AreEqual(expected, total);
         }
+
+        [TestMethod]
+        public void HaveFunNamingThis() {
+            //search for a BankAccount given an account number
+            //p.s. remove using System.Linq from Bank class
+
+        }
     }
 }

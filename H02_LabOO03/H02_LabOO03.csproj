@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{419D4973-E107-4493-B8C5-5B5A5D00D9BF}</ProjectGuid>
+    <ProjectGuid>{1F9D1FDE-A21C-4301-A197-8A54B1E2B5AF}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>H04_OO02</RootNamespace>
-    <AssemblyName>H04_OO02</AssemblyName>
+    <RootNamespace>H02_LabOO03</RootNamespace>
+    <AssemblyName>H02_LabOO03</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,10 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bank.cs" />
-    <Compile Include="BankAccount.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -7,11 +7,24 @@ using System.Threading.Tasks;
 namespace H04_OO02 {
     public class Bank 
     {
-        private int lastBankAccountNumber = 0;// default == 0
-        private string _name;
+        //new Bank() // default constructor
+        public Bank() 
+        {
+            accounts = new BankAccount[10];
+            _name = "";
+        }
 
-        private BankAccount[] accounts = new BankAccount[10];// null
-        int count = 0;
+        //new Bank("Rabobank");
+        public Bank(string bankName) {
+            accounts = new BankAccount[10];
+            _name = bankName;
+        }
+
+        private int lastBankAccountNumber;// default == 0
+        private string _name; //default == null
+
+        private BankAccount[] accounts;// null
+        int count; // = 0;
 
         public string Name 
         {
@@ -30,8 +43,8 @@ namespace H04_OO02 {
             //lastBankAccountNumber = lastBankAccountNumber + 1;
             //BankAccount b1 = new BankAccount();
             //b1.AccountNumber = _name + lastBankAccountNumber;
-            BankAccount b1 = new BankAccount();
-            b1.AccountNumber = _name + ++lastBankAccountNumber;
+            BankAccount b1 = new BankAccount(_name + ++lastBankAccountNumber);
+            //b1.AccountNumber = _name + ++lastBankAccountNumber;
             accounts[count++] = b1;
             return b1;
         }
@@ -39,14 +52,21 @@ namespace H04_OO02 {
         //decimal total = bank.GetTotalSaldo();
         public decimal GetTotalSaldo() {
             decimal total = 0;
-            //foreach (BankAccount account in accounts) {
-            //    if(account!=null)
-            //        total += account.Saldo;
-            //}
             for (int i = 0; i < count; i++) {
                 total += accounts[i].Saldo;
             }
             return total;
+        }
+
+        public BankAccount GetBankAccountByNumber(string accountNumber) {
+            BankAccount account = null;
+            for (int i = 0; i < count; i++) {
+                if (accountNumber == accounts[i].AccountNumber) {
+                    account = accounts[i];
+                    break;
+                }
+            }
+            return account;
         }
     }
 }

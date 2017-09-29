@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 namespace H04_OO02 {
     public class BankAccount 
     {
+        public BankAccount(string accountNumber) {
+            AccountNumber = accountNumber;
+        }
+
         private decimal _saldo; //default == 0
 
         //public void SetAccountNumber(string inputValue) {
@@ -25,7 +29,7 @@ namespace H04_OO02 {
         public string AccountNumber 
         {
             //b1.AccountNumber = "aaaaaaaaaaaaaaaaaaaa";
-            set //value => "aaaaaaaaaaaaaaaaaaaa"
+            private set //value => "aaaaaaaaaaaaaaaaaaaa"
             {
                 if (value.Length > 20) {
                     _accountNumber = value.Substring(0, 20);

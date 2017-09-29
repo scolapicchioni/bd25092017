@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace H04_OO02 {
     public class Customer {
-        private string _name;
+        private string _name; // null
 
         public string Name {
             get { return _name; }
@@ -17,5 +17,14 @@ namespace H04_OO02 {
             }
         }
 
+        private BankAccount _account; // null
+        public BankAccount Account {
+            get {
+                return _account;
+            }
+            set {
+                _account = value;
+            }
+        }
     }
 }

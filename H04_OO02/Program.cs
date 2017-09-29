@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 namespace H04_OO02 {
     class Program {
         static void Main(string[] args) {
-            BankAccount b1 = new BankAccount();
+            Person toad = new Person(); //default
+            Person waldo = new Person("Luigi");
+            Person peach = new Person(44);
+            Person wario = new Person("Wario", 45);
+            toad.SayHi();
+            
+            BankAccount b1 = new BankAccount("RABO0174y5yu4jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj");
 
-            //b1.Saldo = -1000;
-            //b1.Saldo = 1000;
-
-            b1.AccountNumber = "RABO0174y5yu4jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj";
-            //b1.SetAccountNumber("RABO0174y5yu4jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj");
             Console.WriteLine(b1.AccountNumber);
 
             ////b1.Saldo 
