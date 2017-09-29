@@ -25,7 +25,8 @@ namespace AdditionalResources {
             //https://www.codingame.com/start
             //https://www.codehunt.com/
             //https://www.codewars.com/
-
+            
+            //simonac@infosupport.com
         }
     }
 }
