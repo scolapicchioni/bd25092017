@@ -104,5 +104,7 @@ namespace H04_OO02.Tests {
             //Then the returned value should be 0
             Assert.AreEqual(0, b1.Saldo);
         }
+
+        
     }
 }

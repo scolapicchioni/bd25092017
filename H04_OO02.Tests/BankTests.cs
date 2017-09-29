@@ -19,5 +19,36 @@ namespace H04_OO02.Tests {
             //Of The Bank
             Assert.IsTrue(b1.AccountNumber.StartsWith(bank.Name));
         }
+
+        [TestMethod]
+        public void GivenANewBank_WhenOpeningTwoAccounts_ThenTheAccountNumberShouldBeDifferent() 
+        {
+            Bank bank = new Bank();
+            bank.Name = "Rabobank";
+            BankAccount b1 = bank.OpenAccount();
+            BankAccount b2 = bank.OpenAccount();
+            Assert.AreNotEqual(b1.AccountNumber, b2.AccountNumber);
+        }
+
+        [TestMethod]
+        public void GivenANewBankAnd3BankAccountsWithASaldoOf100Each_WhenAskingForTotalMoney_ThenTheTotalShouldBe300() 
+        {
+            //GivenANewBank
+            Bank bank = new Bank();
+            bank.Name = "Rabobank";
+            //And3BankAccounts
+            BankAccount b1 = bank.OpenAccount();
+            BankAccount b2 = bank.OpenAccount();
+            BankAccount b3 = bank.OpenAccount();
+            //WithASaldoOf100Each
+            b1.Deposit(100);
+            b2.Deposit(100);
+            b3.Deposit(100);
+            //WhenAskingForTotalMoney
+            decimal expected = 300;
+            decimal total = bank.GetTotalSaldo();
+            //ThenTheTotalShouldBe300
+            Assert.AreEqual(expected, total);
+        }
     }
 }
