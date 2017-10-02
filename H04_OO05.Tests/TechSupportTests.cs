@@ -19,11 +19,11 @@ namespace H04_OO05.Tests {
 
             Contact c2 = new Contact() { Name = "C2", PhoneNumber = "PN2" };
 
-            sourcePhone.Contacts[0] = c1;
-            sourcePhone.Contacts[1] = c2;
-            sourcePhone.Contacts[2] = new Contact() { Name = "C3", PhoneNumber = "PN3" };
-            sourcePhone.Contacts[3] = new Contact() { Name = "C4", PhoneNumber = "PN4" };
-            sourcePhone.Contacts[4] = new Contact() { Name = "C5", PhoneNumber = "PN5" };
+            sourcePhone.AddContact(c1.Name,c1.PhoneNumber);
+            sourcePhone.AddContact(c2.Name,c2.PhoneNumber);
+            sourcePhone.AddContact("C3", "PN3");
+            sourcePhone.AddContact("C4", "PN4");
+            sourcePhone.AddContact("C5", "PN5");
 
             //AndAPhone
             Phone targetPhone = new Phone();
@@ -35,9 +35,9 @@ namespace H04_OO05.Tests {
             techSupport.CopyContacts(sourcePhone, targetPhone);
 
             //ThenTheContactsInPhone2ShouldBeTheSameOfPhone1
-            for (int i = 0; i < 5; i++) {
-                Assert.AreEqual(sourcePhone.Contacts[i].Name, targetPhone.Contacts[i].Name);
-                Assert.AreEqual(sourcePhone.Contacts[i].PhoneNumber, targetPhone.Contacts[i].PhoneNumber);
+            for (int i = 0; i < sourcePhone.ContactsCount; i++) {
+                Assert.AreEqual(sourcePhone.GetContactAt(i).Name, targetPhone.GetContactAt(i).Name);
+                Assert.AreEqual(sourcePhone.GetContactAt(i).PhoneNumber, targetPhone.GetContactAt(i).PhoneNumber);
             }
         }
     }

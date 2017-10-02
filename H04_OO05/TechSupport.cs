@@ -7,12 +7,16 @@ using System.Threading.Tasks;
 namespace H04_OO05 {
     public class TechSupport {
         public void CopyContacts(Phone source, Phone target) {
-            for (int i = 0; i < source.Contacts.Length; i++) {
-                if(source.Contacts[i]!=null)
-                    target.Contacts[i] = new Contact() {
-                        Name = source.Contacts[i].Name,
-                        PhoneNumber = source.Contacts[i].PhoneNumber
-                    };
+            for (int i = 0; i < source.ContactsCount; i++) {
+                Contact sourceContact = source.GetContactAt(i);
+                if (sourceContact != null)
+                    //target.AddContact(new Contact() {
+                    //    Name = sourceContact.Name,
+                    //    PhoneNumber = sourceContact.PhoneNumber
+                    //});
+                    target.AddContact(  sourceContact.Name,
+                                        sourceContact.PhoneNumber
+                                    );
             }
         }
     }
