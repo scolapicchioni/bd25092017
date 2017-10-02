@@ -4,10 +4,9 @@ using System.IO;
 namespace H04_OO04 {
     class Program {
         static void Main(string[] args) {
-
             Student[] students = new Student[3];
             Teacher[] teachers = new Teacher[3];
-
+            School school = new School();
             for (int i = 0; i < teachers.Length; i++) {
                 Console.Write("Teacher name: ");
                 string name = Console.ReadLine();
@@ -16,7 +15,7 @@ namespace H04_OO04 {
                 Console.Write("Course name: ");
                 string coursename = Console.ReadLine();
 
-                Course c = new Course(coursename);
+                Course c = school.GetCourse(coursename); //new Course(coursename);
                 Teacher t = new Teacher(name, salary, c);
 
                 teachers[i] = t;
@@ -30,7 +29,7 @@ namespace H04_OO04 {
                 Console.Write("Course name: ");
                 string coursename = Console.ReadLine();
 
-                Course c = new Course(coursename);
+                Course c = school.GetCourse(coursename);
                 Student s = new Student(name, id, c);
 
                 students[i] = s;
