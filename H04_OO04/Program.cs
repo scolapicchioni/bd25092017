@@ -1,10 +1,12 @@
 ﻿using System;
+using System.IO;
 
 namespace H04_OO04 {
     class Program {
         static void Main(string[] args) {
-            Student[] students = new Student[10];
-            Teacher[] teachers = new Teacher[10];
+
+            Student[] students = new Student[3];
+            Teacher[] teachers = new Teacher[3];
 
             for (int i = 0; i < teachers.Length; i++) {
                 Console.Write("Teacher name: ");
@@ -33,7 +35,18 @@ namespace H04_OO04 {
 
                 students[i] = s;
             }
-            Console.WriteLine();
+
+            StreamWriter sw = new StreamWriter(@"C:\temp\studentteachers.txt");
+            Console.WriteLine("****TEACHERS*****");
+            for (int i = 0; i < teachers.Length; i++) {
+                sw.WriteLine($"{teachers[i].Name} {teachers[i].Salary} {teachers[i].CurrentlyTeachingCourse.Name}");
+            }
+            Console.WriteLine("****STUDENTS*****");
+            for (int i = 0; i < students.Length; i++) {
+                sw.WriteLine($"{students[i].Name} {students[i].StudentId} {students[i].CurrentlyFollowingCourse.Name}");
+            }
+            sw.Dispose();
+
             Console.ReadLine();
         }
     }
