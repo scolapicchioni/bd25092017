@@ -159,6 +159,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H04_OO04.Tests", "H04_OO04.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H04_OO05", "H04_OO05\H04_OO05.csproj", "{BBB3787D-A1CA-4AC3-A2D3-D44BDE1A3423}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H04_OO05.Tests", "H04_OO05.Tests\H04_OO05.Tests.csproj", "{A9C6427F-7002-4E5C-BBDC-86DD1C9A4D8F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -477,6 +479,10 @@ Global
 		{BBB3787D-A1CA-4AC3-A2D3-D44BDE1A3423}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBB3787D-A1CA-4AC3-A2D3-D44BDE1A3423}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBB3787D-A1CA-4AC3-A2D3-D44BDE1A3423}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9C6427F-7002-4E5C-BBDC-86DD1C9A4D8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9C6427F-7002-4E5C-BBDC-86DD1C9A4D8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9C6427F-7002-4E5C-BBDC-86DD1C9A4D8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9C6427F-7002-4E5C-BBDC-86DD1C9A4D8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
