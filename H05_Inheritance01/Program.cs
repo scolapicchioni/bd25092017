@@ -10,12 +10,12 @@ namespace H05_Inheritance01 {
             //Person p = new Person() { Name = "Simona" };
             //Print(p);
 
-            Student s = new Student() { Name = "Student1",StudentId =1 };
+            //Student s = new Student() { Name = "Student1",StudentId =1 };
 
-            Teacher t = new Teacher() { Gender = 1 , Salary = 1234};
+            //Teacher t = new Teacher() { Gender = 1 , Salary = 1234};
 
-            Print(t);
-            Print(s);
+            //Print(t);
+            //Print(s);
 
             ////Person toPrint = t;
             //Person toPrint = new Teacher() { Gender = 1, Salary = 1234 };
@@ -29,6 +29,10 @@ namespace H05_Inheritance01 {
             //people[2] = new Student();
 
             //people[2].StudentId
+
+            //Person p = new Person("Simona");
+            Student s = new Student("Simona");
+            Console.ReadLine();
         }
 
         private static void Print(Person toPrint) {

@@ -27,6 +27,10 @@ namespace H05_Inheritance01 {
             return course;
         }
 
+        public void Print(Person p) {
+            Console.WriteLine(p.Name);
+        }
+
         public void Print(Student s) {
             Console.WriteLine(s.Name);
         }

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace H05_Inheritance01 {
     public class Teacher : Person {
+        public Teacher() : base("") {
+
+        }
         public decimal Salary { get; set; }
     }
 }
