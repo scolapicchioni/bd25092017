@@ -77,6 +77,15 @@ In case a payment cannot be performed a message must be shown (and the payment i
 
 The properties Address and City may be omitted.
 */
+
+            Card[] cards = new Card[10];
+            //cards[2] = new Card(3,"","","",123);
+            cards[0] = new RegularCard(1, "", "", "", 123);
+            cards[1] = new GoldCard(2, "", "", "", 123,2);
+
+            cards[0].Pay(22);
+            cards[1].Pay(22);
+
         }
     }
 }

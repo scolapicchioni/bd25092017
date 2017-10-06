@@ -26,6 +26,7 @@ namespace H05_LabInheritance02 {
              * Input the textbox 
              * Set the text of the second label to: "Hello" + the text of the textbox 
              */
+             
         }
     }
 }

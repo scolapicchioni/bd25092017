@@ -18,8 +18,9 @@ namespace H05_LabInheritance01.Tests {
             Assert.AreEqual(address, card.CustomerAddress);
             Assert.AreEqual(city, card.CustomerCity);
             Assert.AreEqual(credit, card.Credit);
+            Assert.AreEqual(discount, card.Discount);
         }
-        
+
         [DataTestMethod]
         [DataRow(0)]
         [DataRow(31)]

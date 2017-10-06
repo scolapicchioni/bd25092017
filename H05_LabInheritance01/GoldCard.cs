@@ -23,7 +23,5 @@ namespace H05_LabInheritance01 {
             Credit -= toPay;
             return true;
         }
-
-        
     }
 }

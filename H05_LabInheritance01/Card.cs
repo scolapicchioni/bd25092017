@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace H05_LabInheritance01 {
-    public class Card {
+    public abstract class Card {
         public Card(int cardId, string name, string address, string city, decimal credit) {
             Id = cardId;
             CustomerName = name;
@@ -19,8 +19,6 @@ namespace H05_LabInheritance01 {
         public string CustomerCity { get; set; }
         public decimal Credit { get; protected set; }
 
-        public virtual bool Pay(decimal amount) {
-            return true;
-        }
+        public abstract bool Pay(decimal amount);
     }
 }
