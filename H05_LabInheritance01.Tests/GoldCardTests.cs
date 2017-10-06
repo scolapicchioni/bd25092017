@@ -23,6 +23,7 @@ namespace H05_LabInheritance01.Tests {
         [DataTestMethod]
         [DataRow(0)]
         [DataRow(31)]
+        //[ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void GivenGoldCard_WhenConstructingWithDiscountOutOfRange_ThenShouldThrow(int discount) {
             int cardId = 1;
             string name = "Customer1";
@@ -37,6 +38,7 @@ namespace H05_LabInheritance01.Tests {
         [DataTestMethod]
         [DataRow(0)]
         [DataRow(31)]
+        //[ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void GivenGoldCard_WhenSettingDiscountOutOfRange_ThenShouldThrow(int discount) {
             int cardId = 1;
             string name = "Customer1";
