@@ -80,7 +80,7 @@ namespace H04_OO06.Tests
         [DataTestMethod]
         [DataRow(20, 20)]
         [DataRow(-20, 0)]
-        public void GivenANewBankAccount_WhenDepositingAnAmount_ThenTheBalanceShouldIncreaseAccordingly(decimal amount, decimal expected) {
+        public void GivenANewBankAccount_WhenDepositingAnAmount_ThenTheBalanceShouldIncreaseAccordingly(int amount, int expected) {
             //GivenNewBankAccount
             BankAccount b = new BankAccount();
             decimal previousBalance = b.Balance;
@@ -93,7 +93,7 @@ namespace H04_OO06.Tests
         [DataTestMethod]
         [DataRow(20, 20)]
         [DataRow(-20, 0)]
-        public void GivenANewBankAccount_WhenDepositingAnAmount_ThenTheReturnValueShouldBeAnExpectedValue(decimal amount, decimal expected) {
+        public void GivenANewBankAccount_WhenDepositingAnAmount_ThenTheReturnValueShouldBeAnExpectedValue(int amount, int expected) {
             //GivenNewBankAccount
             BankAccount b = new BankAccount();
             decimal previousBalance = b.Balance;
