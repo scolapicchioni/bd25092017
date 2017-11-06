@@ -7,7 +7,7 @@ namespace H04_OO07.Tests {
         [TestMethod]
         public void GivenNewBankAccount_ThenBalanceIsZero() {
             //GivenNewBankAccount
-            BankAccount b = new BankAccount();
+            BankAccount b = new BankAccount("abc");
             //ThenBalanceIsZero
             Assert.AreEqual(0, b.Balance);
         }
@@ -15,9 +15,7 @@ namespace H04_OO07.Tests {
         [TestMethod]
         public void GivenNewBankAccount_WhenAccountNumberIsSet_ThenAccountNumberShouldBeSetWithTheInitialValue() {
             //GivenNewBankAccount
-            BankAccount b = new BankAccount();
-            //WhenAccountNumberIsSet
-            b.AccountNumber = "abcd";
+            BankAccount b = new BankAccount("abcd");
             //ThenAccountNumberShouldBeSetWithTheInitialValue
             Assert.AreEqual("abcd", b.AccountNumber);
         }
@@ -25,9 +23,9 @@ namespace H04_OO07.Tests {
         [DataTestMethod]
         [DataRow(20, 20)]
         [DataRow(-20, 0)]
-        public void GivenANewBankAccount_WhenDepositingAnAmount_ThenTheBalanceShouldIncreaseAccordingly(decimal amount, decimal expected) {
+        public void GivenANewBankAccount_WhenDepositingAnAmount_ThenTheBalanceShouldIncreaseAccordingly(int amount, int expected) {
             //GivenNewBankAccount
-            BankAccount b = new BankAccount();
+            BankAccount b = new BankAccount("abc");
             decimal previousBalance = b.Balance;
             //WhenDepositingAnAmount
             b.Deposit(amount);
@@ -40,7 +38,7 @@ namespace H04_OO07.Tests {
         [DataRow(-20, 0)]
         public void GivenANewBankAccount_WhenDepositingAnAmount_ThenTheReturnValueShouldBeAnExpectedValue(int amount, int expected) {
             //GivenNewBankAccount
-            BankAccount b = new BankAccount();
+            BankAccount b = new BankAccount("abc");
             decimal previousBalance = b.Balance;
             //WhenDepositingAnAmount
             decimal returnValue = b.Deposit(amount);
@@ -51,7 +49,7 @@ namespace H04_OO07.Tests {
         [TestMethod]
         public void GivenNewBankAccount_WhenWithdrawingMoreThanTheBalance_ThenTheBalanceShouldBeNegative() {
             //GivenNewBankAccount
-            BankAccount b = new BankAccount();
+            BankAccount b = new BankAccount("abc");
             
             //WhenWithdrawingMoreThanTheBalance
             b.Withdraw(b.Balance + 1);
@@ -64,7 +62,7 @@ namespace H04_OO07.Tests {
         [TestMethod]
         public void GivenNewBankAccountAndABalanceOf100_WhenWithdrawingLessThanTheBalance_ThenTheBalanceShouldDecrease() {
             //GivenNewBankAccount
-            BankAccount b = new BankAccount();
+            BankAccount b = new BankAccount("abc");
             //AndABalanceOf100
             b.Deposit(100);
 

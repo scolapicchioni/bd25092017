@@ -6,6 +6,15 @@ namespace H04_OO07
 {
     public class SavingsAccount : BankAccount {
 
+        //new SavingsAccount("abc")
+        internal SavingsAccount(string accNumber) : this(accNumber, 1) {
+
+        }
+
+        internal SavingsAccount(string accNumber, double interestRate) : base(accNumber) {
+            InterestRate = interestRate;
+        }
+
         private double interestRate;
         public double InterestRate {
             get {

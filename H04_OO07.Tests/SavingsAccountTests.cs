@@ -10,7 +10,7 @@ namespace H04_OO07.Tests
         [TestMethod]
         public void GivenNewBankAccountWithATypeOfSavings_WhenInterestRateIsSetBetweenTheRange_ThenInterestRateShouldBeSetWithTheInitialValue() {
             //GivenNewBankAccount
-            SavingsAccount b = new SavingsAccount();
+            SavingsAccount b = new SavingsAccount("abc",10);
             
             //WhenAccountNumberIsSet
             b.InterestRate = 10.0;
@@ -23,7 +23,7 @@ namespace H04_OO07.Tests
         [DataRow(21.0)]
         public void GivenNewBankAccountWithATypeOfSavings_WhenInterestRateIsSetNotBetweenTheRange_ThenAnExceptionShouldBeThrown(double rate) {
             //GivenNewBankAccount
-            SavingsAccount b = new SavingsAccount();
+            SavingsAccount b = new SavingsAccount("abc", 10);
 
             //WhenInterestRateIsSetNotBetweenTheRange
             //ThenAnExceptionShouldBeThrown
@@ -36,7 +36,7 @@ namespace H04_OO07.Tests
         public void GivenNewBankAccountWithTypeSavings_WhenWithdrawingMoreThanTheBalance_ThenAnExceptionShouldBeThrown() {
 
             //GivenNewBankAccount
-            SavingsAccount b = new SavingsAccount();
+            SavingsAccount b = new SavingsAccount("abc", 10);
 
             //ThenAnExceptionShouldBeThrown
             Assert.ThrowsException<OperationNotSupportedException>(
