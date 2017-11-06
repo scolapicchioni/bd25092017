@@ -9,8 +9,38 @@ namespace H04_OO07
         private BankAccount[] accounts = new BankAccount[20];
         private int count = 0;
 
-        public BankAccount GetAccount(int index) {
-            return accounts[index];
+        public int Count => count;
+
+        //bank.GetAccount(2)
+        //public BankAccount GetAccount(int index) {
+        //    return accounts[index];
+        //}
+
+        public BankAccount GetAccount(int index) => accounts[index];
+
+        //bank[2]
+        //public BankAccount this[int index] {
+        //    get {
+        //        return accounts[index];
+        //    }
+        //    //bank[5] = b; 
+        //    //set {
+        //    //    accounts[index] = value;
+        //    //}
+        //}
+
+        public BankAccount this[int index] => accounts[index];
+
+        public BankAccount this[string accNumber] {
+            get {
+                BankAccount found = null;
+                for (int i = 0; i < count; i++) {
+                    if (accounts[i].AccountNumber == accNumber) {
+                        return accounts[i];
+                    }
+                }
+                return found;
+            }
         }
 
         public decimal TotalBalance() {

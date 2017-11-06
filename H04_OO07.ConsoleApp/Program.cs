@@ -13,21 +13,32 @@ namespace H04_OO07.ConsoleApp
                 bank.OpenSavingsAccount();
             }
 
-            for (int i = 0; i < 10; i++) {
-                BankAccount item = bank.GetAccount(i);
+            for (int i = 0; i < bank.Count; i++) {
+                BankAccount item = bank[i]; //indexer
+                //BankAccount item = bank["B0003"];
+
                 if (item is SavingsAccount) {
                     Console.WriteLine($"{item.AccountNumber} {item.Balance} {((SavingsAccount)item).InterestRate}");
                 } else {
                     Console.WriteLine($"{item.AccountNumber} {item.Balance} 0");
                 }
-
-                //SavingsAccount sa = item as SavingsAccount;
-                //if (sa != null) {
-                //    Console.WriteLine($"{item.AccountNumber} {item.Balance} {sa.InterestRate}");
-                //} else {
-                //    Console.WriteLine($"{item.AccountNumber} {item.Balance} 0");
-                //}
             }
+
+            //for (int i = 0; i < 10; i++) {
+            //    BankAccount item = bank.GetAccount(i);
+            //    if (item is SavingsAccount) {
+            //        Console.WriteLine($"{item.AccountNumber} {item.Balance} {((SavingsAccount)item).InterestRate}");
+            //    } else {
+            //        Console.WriteLine($"{item.AccountNumber} {item.Balance} 0");
+            //    }
+
+            //    //SavingsAccount sa = item as SavingsAccount;
+            //    //if (sa != null) {
+            //    //    Console.WriteLine($"{item.AccountNumber} {item.Balance} {sa.InterestRate}");
+            //    //} else {
+            //    //    Console.WriteLine($"{item.AccountNumber} {item.Balance} 0");
+            //    //}
+            //}
 
             //BankAccount b2 = new BankAccount("abc");
 

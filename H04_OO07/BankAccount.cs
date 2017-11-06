@@ -7,11 +7,7 @@ namespace H04_OO07
             AccountNumber = accNumber;
         }   
 
-        private decimal balance;
-
         public decimal Balance { get; protected set; }
-
-        private string accountNumber;
 
         public string AccountNumber { get; }
 
