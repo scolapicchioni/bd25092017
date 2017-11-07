@@ -8,6 +8,8 @@ namespace H06_OO01
     {
         public Phone() {
             Apps.Add(new PhoneBook());
+            Apps.Add(new Calculator());
+            Apps.Add(new Calendar());
         }
         public Collection<App> Apps { get; } = new Collection<App>();
     }

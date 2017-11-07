@@ -9,7 +9,7 @@ namespace H06_OO01.Tests
     public class CollectionTests
     {
         [TestMethod]
-        public void GivenANewContactsCollection_WhenAddingAContact_ThenTheCountShouldBe1() {
+        public void GivenANewCollection_WhenAddingAnItem_ThenTheCountShouldBe1() {
             Collection<Contact> cc = new Collection<Contact>();
             cc.Add(new Contact());
             Assert.AreEqual(1, cc.Count);
