@@ -14,6 +14,15 @@ namespace H06_OO01
         }
         public TypeOfTheItem this[int index] => items[index];
 
-        
+        public TypeToFind FirstOrDefault<TypeToFind>()
+            where TypeToFind : TypeOfTheItem {
+            for (int i = 0; i < count; i++) {
+                TypeOfTheItem item = items[i];
+                if (item is TypeToFind) {
+                    return (TypeToFind)item;
+                }
+            }
+            return default(TypeToFind);
+        }
     }
 }

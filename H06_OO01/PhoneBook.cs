@@ -6,7 +6,7 @@ namespace H06_OO01
 {
     public class PhoneBook : App
     {
-        public Collection<Contact> Contacts { get; } = new Collection<Contact>();
+        public ContactsCollection Contacts { get; } = new ContactsCollection();
 
         public override void Start() {
             

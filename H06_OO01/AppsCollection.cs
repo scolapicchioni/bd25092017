@@ -14,7 +14,17 @@ namespace H06_OO01
         }
         public App this[int index] => items[index];
 
-        
+        //FIrst<int>
+        public TypeToFind First<TypeToFind>()
+            where TypeToFind : App {
+            for (int i = 0; i < count; i++) {
+                App app = items[i];
+                if (app is TypeToFind) {
+                    return (TypeToFind)app;
+                }
+            }
+            return null;
+        }
 
         
     }
