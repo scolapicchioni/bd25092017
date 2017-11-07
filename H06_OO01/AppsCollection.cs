@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace H06_OO01
+{
+    public class AppsCollection
+    {
+        private App[] items = new App[10];
+        private int count = 0;
+        public int Count => count;
+        public void Add(App item) {
+            items[count++] = item;
+        }
+        public App this[int index] => items[index];
+
+        
+
+        
+    }
+}
