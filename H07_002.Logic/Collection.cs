@@ -23,5 +23,6 @@ namespace H07_OO02.Logic {
             }
             return default(TypeToFind);
         }
+
     }
 }
