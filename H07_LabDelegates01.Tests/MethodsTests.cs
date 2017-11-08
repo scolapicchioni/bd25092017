@@ -62,5 +62,80 @@ namespace H07_LabDelegates01.Tests
             Assert.AreEqual(list[0], result);
             Assert.AreEqual(true, brandFilter(result));
         }
+
+        [TestMethod]
+        public void GivenAListOfCarsWithAudi_WhenInvokingAnyAudi_ThenTheReturnValueShouldBeTrue() {
+            //GivenAListOfCarsWithAudi
+            List<Car> list = new List<Car>() {
+                new Car("Audi", "A1", 12345),
+                new Car("Audi", "A2", 23456),
+                new Car("Audi", "A3", 34567),
+                new Car("FIAT", "500", 9876),
+                new Car("FIAT", "Punto", 10987),
+                new Car("FIAT", "Panda", 11109),
+                new Car("Ferrari", "Testarossa", 111000),
+                new Car("Ferrari", "Enzo", 112000)
+            };
+
+            //WhenInvokingAnyAudi
+            bool result = Program.Any(list, brandFilter);
+
+            //ThenTheReturnValueShouldBeTrue
+            Assert.IsTrue(result);
+
+        }
+
+        [TestMethod]
+        public void GivenAListOfCarsWithNoAudi_WhenInvokingAnyAudi_ThenTheReturnValueShouldBeFalse() {
+            //GivenAListOfCarsWithNoAudi
+            List<Car> list = new List<Car>() {
+                new Car("FIAT", "500", 9876),
+                new Car("FIAT", "Punto", 10987),
+                new Car("FIAT", "Panda", 11109),
+                new Car("Ferrari", "Testarossa", 111000),
+                new Car("Ferrari", "Enzo", 112000)
+            };
+
+            //WhenInvokingAnyAudi
+            bool result = Program.Any(list, brandFilter);
+
+            //ThenTheReturnValueShouldBeFalse
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void GivenAListOfCarsWithAllAudi_WhenInvokingAllAudi_ThenTheReturnValueShouldBeTrue() {
+            //GivenAListOfCarsWithAllAudi
+            List<Car> list = new List<Car>() {
+                new Car("Audi", "A1", 12345),
+                new Car("Audi", "A2", 23456),
+                new Car("Audi", "A3", 34567)
+            };
+
+            //WhenInvokingAllAudi
+            bool result = Program.All(list, brandFilter);
+
+            //ThenTheReturnValueShouldBeTrue
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void GivenAListOfCarsWithAudiAndFIAT_WhenInvokingAllAudi_ThenTheReturnValueShouldBeFalse() {
+            //GivenAListOfCarsWithNoAudi
+            List<Car> list = new List<Car>() {
+                new Car("FIAT", "500", 9876),
+                new Car("FIAT", "Punto", 10987),
+                new Car("FIAT", "Panda", 11109),
+                new Car("Audi", "A1", 12345),
+                new Car("Audi", "A2", 23456),
+                new Car("Audi", "A3", 34567)
+            };
+
+            //WhenInvokingAllAudi
+            bool result = Program.All(list, brandFilter);
+
+            //ThenTheReturnValueShouldBeFalse
+            Assert.IsFalse(result);
+        }
     }
 }

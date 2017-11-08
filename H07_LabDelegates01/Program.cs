@@ -138,9 +138,30 @@ namespace H07_LabDelegates01
 
         static void printCar(Car c) {
             Console.WriteLine($"{c.Brand}\t{c.Model}\t{c.Price}");
+
+            List<string> strings = new List<string>();
+            List<string> result = GenericFilter(strings, s => s.Length > 20);
+
+            List<Car> cars = new List<Car>();
+            List<Car> res = GenericFilter(cars, x => x.Brand == "AUDI");
+
+
+            //GenericFilter<BankAccount>()
         }
 
         public delegate bool Function(Car car);
+
+        public delegate bool GenericFunction<TypeOfElementOfTheFunction>(TypeOfElementOfTheFunction item);
+
+        public static List<T> GenericFilter<T>(List<T> list, GenericFunction<T> function) {
+            List<T> result = new List<T>();
+            foreach (T item in list) {
+                if (function(item))
+                    result.Add(item);
+            }
+            return result;
+        }
+
 
         public static List<Car> Filter(List<Car> list, Function function) {
             List<Car> result = new List<Car>();
@@ -157,6 +178,22 @@ namespace H07_LabDelegates01
                     return item;
             }
             return null;
+        }
+
+        public static bool Any(List<Car> list, Function function) {
+            foreach (Car item in list) {
+                if (function(item))
+                    return true;
+            }
+            return false;
+        }
+
+        public static bool All(List<Car> list, Function function) {
+            foreach (Car item in list) {
+                if (!function(item))
+                    return false;
+            }
+            return true;
         }
 
         private static bool brandFilter(Car car) {
