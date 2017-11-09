@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace H07_OO02.Logic {
+    public delegate bool Inspector<T>(T element);
     public class Collection<TypeOfTheItem>
     {
         private TypeOfTheItem[] items = new TypeOfTheItem[10];
@@ -24,5 +25,16 @@ namespace H07_OO02.Logic {
             return default(TypeToFind);
         }
 
+        public Collection<TypeOfTheItem> Filter(Inspector<TypeOfTheItem> dude) {
+            Collection<TypeOfTheItem> result = new Collection<TypeOfTheItem>();
+
+            for (int i = 0; i < count; i++) {
+                if (dude(items[i])) {
+                    result.Add(items[i]);
+                }
+            }
+
+            return result;
+        }
     }
 }
