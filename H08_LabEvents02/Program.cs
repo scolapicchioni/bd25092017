@@ -10,6 +10,7 @@ namespace H08_LabEvents02
              * A Player has a Name property 
              * A Player has a a Play method 
              * that returns a random int between 1 and 6.
+             * 
              * A Game has a Player1 and a Player2 properties 
              * that should be set during the making of a new Game.
              * A Game has a Start method.
