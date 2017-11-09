@@ -12,7 +12,7 @@ namespace H08_LabEvents01
              * its temperature increases by one degree.
              * We want to make sure that the temperature never goes above 100 degrees.
              * The NuclearReactor does not know how to decrease its temperature,
-             * but it has an alarm that goes on everytime that its temperature increases.
+             * but it has an alarm that goes on everytime its temperature increases.
              * 
              * We want a Pump to react to the alarm, so that the temperature can get lower.
              * 
@@ -47,7 +47,26 @@ namespace H08_LabEvents01
              * 
              */
 
+            NuclearReactor reactor = new NuclearReactor();
+            PneumaticPump pp = new PneumaticPump();
+            HydraulicPump hp = new HydraulicPump();
+
+            // Assign the Turn of the pumps as listeners 
+            // to the NuclearReactor Alarm event.
+            reactor.Alarm += hp.Turn;
+            reactor.Alarm += pp.Turn;
+
+            reactor.TemperatureChanged += printAlarm;
+
+            for (int i = 0; i < 300; i++) {
+                reactor.Split();
+            }
+
             Console.ReadLine();
+        }
+
+        static void printAlarm(NuclearReactor r) {
+            Console.WriteLine(r.Temperature);
         }
     }
 }
