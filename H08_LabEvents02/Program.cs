@@ -28,6 +28,15 @@ namespace H08_LabEvents02
              * that is raised everytime the Player plays,
              * then update the UI in a listener contained in the Program.
              */
+
+
+            Player p1 = new Player();
+            IPlayer p2 = new Player();
+
+            ((IPlayer)p1).Play();
+
+            Game g = new Game(p1, p2);
+
         }
     }
 }
