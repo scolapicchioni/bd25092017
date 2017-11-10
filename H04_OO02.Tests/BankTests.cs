@@ -74,8 +74,17 @@ namespace H04_OO02.Tests {
 
         [TestMethod]
         public void GivenANewBankAndTwoBankAccounts_WhenTransferringFromB1ToB2_ThenB1WithdrawAndB2DepositShouldBeInkoved_Moq() {
-            
+            Bank bank = new Bank();
+            var b1 = new Mock<IBankAccount>();
+            var b2 = new Mock<IBankAccount>();
 
+            b1.Setup(b => b.Withdraw(It.IsAny<decimal>())).Verifiable();
+            b2.Setup(b => b.Deposit(It.IsAny<decimal>())).Verifiable();
+
+            bank.Transfer(b1.Object, b2.Object, 10);
+
+            b1.Verify();
+            b2.Verify();
         }
     }
 }

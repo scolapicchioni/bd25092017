@@ -93,17 +93,35 @@ namespace H08_LabEvents02.Tests
 
         [TestMethod]
         public void GivenANewGameAndTwoPlayers_WhenStartingAndPlayer1PlaysANumberEqualToPlayer1_ThenNullShouldBeReturned_Moq() {
+
+            //Action method = () => Console.WriteLine("hi");
+
+            //List<Player> players = new List<Player>() {
+            //    new Player(){Name = "Simona"},
+            //    new Player(){Name = "Abfrnj"},
+            //    new Player(){Name = "AUbg"},
+            //    new Player(){Name = "MNcvir"}
+            //};
+
+            //var newList = from p in players
+            //              select new { UpperCaseName = p.Name, NameLength = p.Name.Length };
+
+            //foreach (var item in newList) {
+            //    item.UpperCaseName
+            //}
+            //var person = new { Id = 1, Name = "Simo", Surname = "Colapicchioni" };
+
             //GivenANewGameAndTwoPlayers
-            Mock<IPlayer> p2 = new Mock<IPlayer>();
-            Mock<IPlayer> p1 = new Mock<IPlayer>();
+            var p2 = new Mock<IPlayer>();
+            var p1 = new Mock<IPlayer>();
 
             p1.Setup(p => p.Play()).Returns(6);
             p2.Setup(p => p.Play()).Returns(6);
 
-            Game g = new Game(p1.Object, p2.Object);
+            var g = new Game(p1.Object, p2.Object);
 
             //WhenStartingAndPlayer1PlaysANumberGreaterThanPlayer2
-            IPlayer winner = g.Start();
+            var winner = g.Start();
 
             //ThenPlayer1ShouldBeReturned
             Assert.IsNull(winner);
