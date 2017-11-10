@@ -30,12 +30,11 @@ namespace H08_LabEvents02
              */
 
 
-            Player p1 = new Player();
+            IPlayer p1 = new Player();
             IPlayer p2 = new Player();
 
-            ((IPlayer)p1).Play();
-
             Game g = new Game(p1, p2);
+
 
         }
     }

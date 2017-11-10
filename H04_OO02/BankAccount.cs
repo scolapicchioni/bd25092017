@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace H04_OO02 {
-    public class BankAccount 
+    public class BankAccount: IBankAccount
     {
         public BankAccount(string accountNumber) {
             AccountNumber = accountNumber;

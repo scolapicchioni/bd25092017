@@ -68,5 +68,10 @@ namespace H04_OO02 {
             }
             return account;
         }
+
+        public void Transfer(IBankAccount from, IBankAccount to, decimal amount) {
+            from.Withdraw(amount);
+            to.Deposit(amount);
+        }
     }
 }

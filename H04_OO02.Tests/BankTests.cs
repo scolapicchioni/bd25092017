@@ -57,5 +57,18 @@ namespace H04_OO02.Tests {
             //p.s. remove using System.Linq from Bank class
 
         }
+
+        [TestMethod]
+        public void MyTestMethod() {
+            Bank bank = new Bank();
+            FakeBankAccount b1 = new FakeBankAccount();
+            FakeBankAccount b2 = new FakeBankAccount();
+
+            bank.Transfer(b1, b2,10);
+
+            Assert.IsTrue(b1.depositInvoked);
+            Assert.IsTrue(b2.withdrawInvoked);
+
+        }
     }
 }
