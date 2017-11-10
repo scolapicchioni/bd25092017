@@ -4,8 +4,7 @@ using System.Text;
 
 namespace H09_LabMocking01
 {
-    public class LibraryStore
-    {
+    public class LibraryStore : ILibraryStore {
         public LibraryMember GetMember(int memberId) {
             throw new NotImplementedException();
         }
