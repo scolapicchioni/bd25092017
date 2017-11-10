@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,15 +60,21 @@ namespace H04_OO02.Tests {
         }
 
         [TestMethod]
-        public void MyTestMethod() {
+        public void GivenANewBankAndTwoBankAccounts_WhenTransferringFromB1ToB2_ThenB1WithdrawAndB2DepositShouldBeInkoved() {
             Bank bank = new Bank();
             FakeBankAccount b1 = new FakeBankAccount();
             FakeBankAccount b2 = new FakeBankAccount();
 
             bank.Transfer(b1, b2,10);
 
-            Assert.IsTrue(b1.depositInvoked);
-            Assert.IsTrue(b2.withdrawInvoked);
+            Assert.IsTrue(b1.withdrawInvoked);
+            Assert.IsTrue(b2.depositInvoked);
+
+        }
+
+        [TestMethod]
+        public void GivenANewBankAndTwoBankAccounts_WhenTransferringFromB1ToB2_ThenB1WithdrawAndB2DepositShouldBeInkoved_Moq() {
+            
 
         }
     }
