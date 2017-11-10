@@ -11,7 +11,7 @@ namespace H09_LabMocking02
         public string Subject { get; set; }
         public string Body { get; set; }
 
-        public bool Send(MailService mailService) {
+        public bool Send(IMailService mailService) {
             return mailService.SendMail(this);
         }
     }

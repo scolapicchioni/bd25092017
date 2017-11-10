@@ -30,5 +30,7 @@ namespace H08_LabEvents02.Tests {
             Assert.IsTrue(actual >= 1 && actual <= 6);
         }
 
+
+        
     }
 }
